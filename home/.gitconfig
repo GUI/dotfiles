@@ -1,0 +1,26 @@
+[include]
+	path = ~/.gitconfig.local
+[core]
+	excludesfile = ~/.gitignore_global
+[push]
+	default = simple
+[diff]
+	renames = true
+	compactionHeuristic = true
+[credential]
+	helper = /usr/bin/git credential-osxkeychain
+[grep]
+	lineNumber = true
+	patternType = extended
+[color "grep"]
+	filename = green bold
+	match = normal yellow
+	linenumber = yellow bold
+[merge]
+	tool = diffconflicts
+[mergetool "diffconflicts"]
+	cmd = diffconflicts vim $BASE $LOCAL $REMOTE $MERGED
+	trustExitCode = true
+[mergetool]
+	keepBackup = false
+	prompt = false

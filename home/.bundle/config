@@ -1,0 +1,3 @@
+---
+#BUNDLE_BUILD__NOKOGIRI: "--use-system-libraries --with-xml2-lib=/opt/pkg/lib --with-xml2-include=/opt/pkg/include/libxml2 --with-xslt-lib=/opt/pkg/lib --with-xslt-include=/opt/pkg/include/libxslt --with-iconv-dir=/opt/pkg --with-zlib-dir=/opt/pkg"
+BUNDLE_BUILD__RGEO: "--with-geos-config=/opt/pkg/bin/geos-config --with-proj-dir=/opt/pkg"
