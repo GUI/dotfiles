@@ -27,7 +27,17 @@ export CFLAGS="-I/opt/pkg/include"
 export CPPFLAGS="-I/opt/pkg/include"
 
 # Don't share history between active terminal sessions.
-unsetopt share_history
+unsetopt SHARE_HISTORY
+
+# Save more history to the file.
+SAVEHIST=999999999
+
+# Cap the amount of history read into memory.
+HISTSIZE=5000
+
+# Have "history" output everything in memory (rather than just 15 lines). Also
+# add dates.
+alias history="fc -il 1"
 
 # Preventing autocomplete slowness with certain Active Directory environment
 # user lookups: http://www.zsh.org/mla/users/2006/msg00769.html
@@ -38,8 +48,6 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 bindkey '^f' forward-word
 
 export JRUBY_OPTS="--dev"
-
-export HISTIGNORE="ls:exit:history"
 
 export LESS="--quit-if-one-screen --hilite-search --ignore-case --LONG-PROMPT --RAW-CONTROL-CHARS  --hilite-unread --no-init --window=-4"
 
