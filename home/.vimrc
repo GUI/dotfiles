@@ -40,3 +40,7 @@ au BufRead,BufNewFile *.py set tabstop=4 shiftwidth=4
 
 let g:netrw_liststyle=1
 let g:netrw_banner=0
+
+" Store swapfiles in  central location (trailing // ensures the filenames are
+" globally unique).
+set directory^=~/.vim/swapfiles//

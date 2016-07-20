@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+set -e -u -x
+
+if [ ! -d $HOME/.homesick/repos/homeshick ]; then
+  git clone https://github.com/andsens/homeshick.git $HOME/.homesick/repos/homeshick
+fi
+
+mkdir -p $HOME/.vim/swapfiles
