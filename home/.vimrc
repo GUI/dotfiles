@@ -6,6 +6,8 @@ Plug 'tpope/vim-sensible'
 
 Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'mustache/vim-mustache-handlebars'
+Plug 'itchyny/lightline.vim'
+Plug 'tpope/vim-commentary'
 
 call plug#end()
 
@@ -40,6 +42,8 @@ au BufRead,BufNewFile *.py set tabstop=4 shiftwidth=4
 
 let g:netrw_liststyle=1
 let g:netrw_banner=0
+
+let g:lightline = { 'colorscheme': 'powerline_customized' }
 
 " Store swapfiles in  central location (trailing // ensures the filenames are
 " globally unique).

@@ -20,6 +20,8 @@ source "$HOME/.homesick/repos/homeshick/homeshick.sh"
 #export PATH="$HOME/.rbenv/bin:/opt/pkg/sbin:/opt/pkg/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 #export DYLD_LIBRARY_PATH="/opt/pkg/lib:$DYLD_LIBRARY_PATH"
 export PATH="$HOME/bin:$PATH"
+export PATH="/usr/local/go/bin:$PATH"
+export PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH"
 export EDITOR=vim
 export VISUAL=vim
 export LDFLAGS="-L/opt/pkg/lib"
@@ -51,5 +53,8 @@ export JRUBY_OPTS="--dev"
 
 export LESS="--quit-if-one-screen --hilite-search --ignore-case --LONG-PROMPT --RAW-CONTROL-CHARS  --hilite-unread --no-init --window=-4"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+source /usr/local/share/chruby/chruby.sh
+source /usr/local/share/chruby/auto.sh
+
+#export NVM_DIR="$HOME/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"

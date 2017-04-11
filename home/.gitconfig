@@ -24,3 +24,8 @@
 [mergetool]
 	keepBackup = false
 	prompt = false
+[pager]
+	grep = false
+[user]
+	email = nick.muerdter@nrel.gov
+	name = Nick Muerdter
