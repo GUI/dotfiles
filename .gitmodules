@@ -1,6 +1,6 @@
-[submodule "home/.zprezto"]
-	path = home/.zprezto
+[submodule "prezto"]
+	path = prezto
 	url = https://github.com/sorin-ionescu/prezto.git
-[submodule "home/.zsh/zsh-autosuggestions"]
-	path = home/.zsh/zsh-autosuggestions
+[submodule "zsh-autosuggestions"]
+	path = zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions.git
