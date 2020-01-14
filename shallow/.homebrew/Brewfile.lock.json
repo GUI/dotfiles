@@ -136,6 +136,12 @@
       },
       "gpg-suite": {
         "version": "2019.2"
+      },
+      "chef-workstation": {
+        "version": "0.13.35"
+      },
+      "docker": {
+        "version": "2.1.0.5,40693"
       }
     },
     "mas": {
@@ -159,6 +165,14 @@
       "Xcode": {
         "id": "497799835",
         "version": "11.3"
+      }
+    },
+    "tap": {
+      "homebrew/cask": {
+        "revision": "d97c1abdc2e3ec3499e388cb6f13efbe546c126d"
+      },
+      "chef/chef": {
+        "revision": "135543479984bf6138849d38b20f8ec01601a1da"
       }
     }
   },

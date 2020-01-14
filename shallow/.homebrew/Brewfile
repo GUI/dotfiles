@@ -1,3 +1,6 @@
+tap "homebrew/cask"
+tap "chef/homebrew-chef"
+
 brew "asdf"
 brew "git"
 brew "neovim"
@@ -7,7 +10,9 @@ brew "zsh"
 
 cask "alfred"
 cask "bartender"
+cask "chef-workstation"
 cask "dbeaver-community"
+cask "docker"
 cask "gpg-suite"
 cask "little-snitch"
 cask "micro-snitch"
