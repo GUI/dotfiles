@@ -21,8 +21,9 @@ source "${HOME}/.zgen/zgen.zsh"
 
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
 
-export PATH="$HOME/bin:$PATH"
+#export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.homebrew/sbin:$HOME/.homebrew/bin:$PATH"
 export PATH="/usr/local/go/bin:$PATH"
 export EDITOR=vim
 export VISUAL=vim
@@ -66,8 +67,8 @@ export JRUBY_OPTS="--dev"
 export LESS="--quit-if-one-screen --hilite-search --ignore-case --LONG-PROMPT --RAW-CONTROL-CHARS --hilite-unread --no-init --window=-4"
 
 # autoload -Uz compinit && compinit
-source $HOME/.asdf/asdf.sh
-source $HOME/.asdf/completions/asdf.bash
+source $HOME/.homebrew/opt/asdf/asdf.sh
+source $HOME/.homebrew/opt/asdf/etc/bash_completion.d/asdf.bash
 
 export PATH="$HOME/.yarn/bin:$PATH"
 export PATH=".git/safe/../../bin/docker-compose:.git/safe/../../bin:$PATH"

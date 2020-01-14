@@ -1,6 +1,15 @@
-[submodule "prezto"]
-	path = prezto
+[submodule "shallow/.homebrew/Homebrew"]
+	path = shallow/.homebrew/Homebrew
+	url = https://github.com/Homebrew/brew.git
+[submodule "shallow/.zgen"]
+	path = shallow/.zgen
+	url = https://github.com/tarjoilija/zgen.git
+[submodule "shallow/.zprezto"]
+	path = shallow/.zprezto
 	url = https://github.com/sorin-ionescu/prezto.git
-[submodule "zsh-autosuggestions"]
-	path = zsh-autosuggestions
+[submodule "shallow/.zsh/zsh-autosuggestions"]
+	path = shallow/.zsh/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions.git
+[submodule "vendor/vim-plug"]
+	path = vendor/vim-plug
+	url = https://github.com/junegunn/vim-plug.git

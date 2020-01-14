@@ -1,0 +1,21 @@
+brew "asdf"
+brew "git"
+brew "neovim"
+brew "ripgrep"
+brew "rsync"
+brew "zsh"
+
+cask "alfred"
+cask "bartender"
+cask "dbeaver-community"
+cask "gpg-suite"
+cask "little-snitch"
+cask "micro-snitch"
+cask "vimr"
+
+mas "1Password 7", id: 1333542190
+mas "Slack", id: 803453959
+mas "The Unarchiver", id: 425424353
+mas "Time Out - Break Reminders", id: 402592703
+mas "Wipr", id: 1320666476
+mas "Xcode", id: 497799835

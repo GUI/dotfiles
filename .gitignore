@@ -1,0 +1,4 @@
+/shallow/.homebrew/*
+/shallow/.vim/.netrwhist
+/shallow/.vim/swapfiles/*
+/shallow/.vim/plugged

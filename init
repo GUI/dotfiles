@@ -8,7 +8,9 @@ if [ ! -d "$REPOS/homeshick" ]; then
   git clone https://github.com/andsens/homeshick.git "$REPOS/homeshick"
 fi
 
-mkdir -p $HOME/.vim/swapfiles
-
 source "$REPOS/homeshick/homeshick.sh"
 homeshick link dotfiles
+
+(cd "$HOME/.homebrew" && brew bundle --verbose)
+
+vim +PlugInstall +qall
