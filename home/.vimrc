@@ -5,6 +5,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-sensible'
 
 Plug 'editorconfig/editorconfig-vim'
+Plug 'leafgarland/typescript-vim'
 "Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'mustache/vim-mustache-handlebars'
 "Plug 'itchyny/lightline.vim'
@@ -19,6 +20,8 @@ Plug 'mileszs/ack.vim'
 Plug 'spacewander/openresty-vim'
 Plug 'hashivim/vim-terraform'
 "Plug 'bronson/vim-trailing-whitespace'
+Plug 'bkad/CamelCaseMotion'
+Plug 'will133/vim-dirdiff'
 
 call plug#end()
 
@@ -81,3 +84,8 @@ au BufNewFile,BufRead Jenkinsfile* setf groovy
 "au BufNewFile,BufRead *.etlua setf html
 
 autocmd FileType vue syntax sync fromstart
+
+let mapleader = ","
+call camelcasemotion#CreateMotionMappings('<leader>')
+
+let g:DirDiffExcludes = ".git,*.log,*.gz"

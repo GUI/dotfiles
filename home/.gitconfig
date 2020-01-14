@@ -2,14 +2,14 @@
 	path = ~/.gitconfig.local
 [core]
 	excludesfile = ~/.gitignore_global
-  #pager = diff-so-fancy | less --tabs=4 -RFX
+  # pager = diff-so-fancy | less --tabs=4 -RFX
 [push]
 	default = simple
 #[diff]
 #	renames = true
 #	compactionHeuristic = true
-[credential]
-	helper = /Users/nmuerdte/bin/git-credential-osxkeychain
+#[credential]
+#	helper = /Users/nmuerdte/bin/git-credential-osxkeychain
 [grep]
 	lineNumber = true
 	patternType = extended
@@ -28,10 +28,25 @@
 [pager]
 	grep = false
 [user]
-	email = nick.muerdter@nrel.gov
+	email = 12112+GUI@users.noreply.github.com
 	name = Nick Muerdter
+	signingkey = 7C517C5A1A14988A
 [diff-so-fancy]
 	changeHunkIndicators = false
 	stripLeadingSymbols = false
 	useUnicodeRuler = false
 	markEmptyLines = false
+[credential]
+	helper = osxkeychain
+[checkout]
+	defaultRemote = origin
+[commit]
+	gpgsign = true
+[diff "sopsdiffer"]
+	textconv = sops -d
+[diff "minjs"]
+  textconv = js-beautify
+  cachetextconv = true
+[diff "mincss"]
+  textconv = js-beautify --css
+  cachetextconv = true
