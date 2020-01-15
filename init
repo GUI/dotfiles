@@ -11,6 +11,6 @@ fi
 source "$REPOS/homeshick/homeshick.sh"
 homeshick link dotfiles
 
-(cd "$HOME/.homebrew" && brew bundle --verbose)
+(cd "$HOME/.homebrew" && brew update --verbose && brew bundle --verbose)
 
 vim +PlugInstall +qall

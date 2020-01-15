@@ -5,7 +5,7 @@
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
 
-path=("/opt/local/sbin" "/opt/local/bin" $path "/usr/sbin" "/sbin")
+path=($path "/usr/sbin" "/sbin")
 
 zstyle ":prezto:*:*" color "yes"
 zstyle ":prezto:module:editor" key-bindings "vi"
@@ -27,9 +27,9 @@ export PATH="$HOME/.homebrew/sbin:$HOME/.homebrew/bin:$PATH"
 export PATH="/usr/local/go/bin:$PATH"
 export EDITOR=vim
 export VISUAL=vim
-export LDFLAGS="-L/opt/local/lib"
-export CFLAGS="-I/opt/local/include"
-export CPPFLAGS="-I/opt/local/include"
+#export LDFLAGS="-L/opt/local/lib"
+#export CFLAGS="-I/opt/local/include"
+#export CPPFLAGS="-I/opt/local/include"
 
 # Don't share history between active terminal sessions.
 unsetopt SHARE_HISTORY
@@ -54,6 +54,7 @@ HISTSIZE=5000
 # Have "history" output everything in memory (rather than just 15 lines). Also
 # add dates.
 alias history="fc -il 1"
+alias psql="docker run --rm -it postgres:12.1-alpine psql"
 
 # Preventing autocomplete slowness with certain Active Directory environment
 # user lookups: http://www.zsh.org/mla/users/2006/msg00769.html

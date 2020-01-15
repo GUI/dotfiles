@@ -1,0 +1,11 @@
+{
+  "bip" : "172.21.0.1/16",
+  "default-address-pools" : [
+    {
+      "base" : "172.22.0.0/16",
+      "size" : 24
+    }
+  ],
+  "debug" : true,
+  "experimental" : false
+}

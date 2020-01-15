@@ -113,7 +113,29 @@
             }
           }
         }
-      }
+      },
+      "httpie": {
+        "version": "2.0.0",
+        "bottle": {
+          "cellar": ":any_skip_relocation",
+          "prefix": "/usr/local",
+          "files": {
+            "catalina": {
+              "url": "https://homebrew.bintray.com/bottles/httpie-2.0.0.catalina.bottle.tar.gz",
+              "sha256": "56b55a29dde9f5288dc1803b42b9934a012939cd7c05ed1d21ae3c9a95024d9b"
+            },
+            "mojave": {
+              "url": "https://homebrew.bintray.com/bottles/httpie-2.0.0.mojave.bottle.tar.gz",
+              "sha256": "39f6e57a70ee1998f730123a85c893757ecbe4660c949906590456a07a3bbdd6"
+            },
+            "high_sierra": {
+              "url": "https://homebrew.bintray.com/bottles/httpie-2.0.0.high_sierra.bottle.tar.gz",
+              "sha256": "4a77117bde4316dbf115c3d636d00047f10ecffd219423608821f09afc71a19a"
+            }
+          }
+        }
+      },
+      "arkweid/lefthook/lefthook": null
     },
     "cask": {
       "vimr": {
@@ -142,6 +164,18 @@
       },
       "docker": {
         "version": "2.1.0.5,40693"
+      },
+      "insomnia": {
+        "version": "7.0.6"
+      },
+      "firefox": {
+        "version": "72.0.1"
+      },
+      "google-chrome": {
+        "version": "79.0.3945.117"
+      },
+      "oracle-jdk": {
+        "version": "13.0.2,8:d4173c853231432d94f001e99d882ca7"
       }
     },
     "mas": {
@@ -164,12 +198,12 @@
       },
       "Xcode": {
         "id": "497799835",
-        "version": "11.3"
+        "version": "11.3.1"
       }
     },
     "tap": {
       "homebrew/cask": {
-        "revision": "d97c1abdc2e3ec3499e388cb6f13efbe546c126d"
+        "revision": "7585eded9eb7831116e10d80680eac7350fd6916"
       },
       "chef/chef": {
         "revision": "135543479984bf6138849d38b20f8ec01601a1da"
@@ -179,11 +213,11 @@
   "system": {
     "macos": {
       "catalina": {
-        "HOMEBREW_VERSION": "2.2.2-97-gd837734",
+        "HOMEBREW_VERSION": "2.2.3-4-gfc0777b",
         "HOMEBREW_PREFIX": "/Users/nmuerdte/.homesick/repos/dotfiles/shallow/.homebrew",
-        "Homebrew/homebrew-core": "37dd837246349b1a5e0bc7a83df0d656fbefdb70",
+        "Homebrew/homebrew-core": "f2463cbba086689c872cddd3a8bc242976a603ff",
         "CLT": "11.3.0.0.1.1574140115",
-        "Xcode": "11.3",
+        "Xcode": "11.3.1",
         "macOS": "10.15.2"
       }
     }
