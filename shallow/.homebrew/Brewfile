@@ -1,4 +1,5 @@
 tap "homebrew/cask"
+tap "homebrew/cask-drivers"
 tap "chef/homebrew-chef"
 
 brew "Arkweid/lefthook/lefthook"
@@ -10,19 +11,30 @@ brew "ripgrep"
 brew "rsync"
 brew "zsh"
 
+brew "aws-iam-authenticator"
+brew "awscli"
+brew "gnu-getopt"
+brew "helm"
+brew "helmfile"
+brew "terraform"
+
 cask "alfred"
 cask "bartender"
 cask "chef-workstation"
 cask "dbeaver-community"
 cask "docker"
 cask "firefox"
+cask "fujitsu-scansnap-home"
 cask "google-chrome"
 cask "gpg-suite"
+cask "imageoptim"
 cask "insomnia"
 cask "little-snitch"
 cask "micro-snitch"
 cask "oracle-jdk"
 cask "vimr"
+cask "virtualbox"
+cask "virtualbox-extension-pack"
 
 mas "1Password 7", id: 1333542190
 mas "Slack", id: 803453959
