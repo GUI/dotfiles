@@ -71,6 +71,11 @@ export LESS="--quit-if-one-screen --hilite-search --ignore-case --LONG-PROMPT --
 source $HOME/.homebrew/opt/asdf/asdf.sh
 source $HOME/.homebrew/opt/asdf/etc/bash_completion.d/asdf.bash
 
+export PATH="$HOME/.homebrew/opt/libpq/bin:$PATH"
+export LDFLAGS="-L$HOME/.homebrew/opt/libpq/lib"
+export CPPFLAGS="-I$HOME/.homebrew/opt/libpq/include"
+export PKG_CONFIG_PATH="$HOME/.homebrew/opt/libpq/lib/pkgconfig"
+
 export PATH="$HOME/.yarn/bin:$PATH"
 export PATH=".git/safe/../../bin/docker-compose:.git/safe/../../bin:$PATH"
 
