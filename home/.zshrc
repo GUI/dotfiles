@@ -51,10 +51,12 @@ SAVEHIST=999999999
 # Cap the amount of history read into memory.
 HISTSIZE=5000
 
+HISTFILE="${ZDOTDIR:-$HOME}/.zhistory"
+
 # Have "history" output everything in memory (rather than just 15 lines). Also
 # add dates.
 alias history="fc -il 1"
-alias psql="docker run --rm -it postgres:12.1-alpine psql"
+# alias psql="docker run --rm -it postgres:12.1-alpine psql"
 
 # Preventing autocomplete slowness with certain Active Directory environment
 # user lookups: http://www.zsh.org/mla/users/2006/msg00769.html
@@ -79,11 +81,13 @@ export PKG_CONFIG_PATH="$HOME/.homebrew/opt/libpq/lib/pkgconfig"
 export PATH="$HOME/.yarn/bin:$PATH"
 export PATH=".git/safe/../../bin/docker-compose:.git/safe/../../bin:$PATH"
 
+export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
+
 ANDROID_HOME="~/Library/Android/sdk"
 export PATH="${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools:${PATH}"
 
 h() {
-  rg --no-filename --no-heading --no-line-number "$@" ~/.zhistory
+  rg --no-filename --no-heading --no-line-number "$@" "$HISTFILE"
 }
 
 if ! zgen saved; then

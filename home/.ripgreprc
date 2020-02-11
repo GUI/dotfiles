@@ -1,0 +1,5 @@
+# Search hidden files by default
+--hidden
+
+# But still exclude .git
+--glob=!.git/*

@@ -1,46 +1,142 @@
+# vi: ft=ruby
+
 tap "homebrew/cask"
 tap "homebrew/cask-drivers"
 tap "chef/homebrew-chef"
 
-brew "Arkweid/lefthook/lefthook"
-brew "asdf"
-brew "git"
-brew "httpie"
-brew "libpq"
-brew "neovim"
-brew "pwgen"
-brew "ripgrep"
-brew "rsync"
+#
+# Terminal Applications
+#
+
+# Shell
 brew "zsh"
 
+# Editor
+brew "neovim"
+
+# Git
+brew "git"
+
+# Git hooks
+brew "Arkweid/lefthook/lefthook"
+
+# Encrypted git secrets
+brew "transcrypt"
+
+# Search
+brew "ripgrep"
+
+# Ruby/Node/Python version manager
+brew "asdf"
+
+# NPM/Yarn
+brew "yarn"
+
+# Random password generator
+brew "pwgen"
+
+# HTTP clients
+brew "curl"
+brew "httpie"
+
+# PostgreSQL client
+brew "libpq"
+
+# Local SSL Certs
+brew "mkcert"
+brew "nss" # For Firefox.
+
+# Newer rsync version
+brew "rsync"
+
+# Command line CSV querying
+brew "csvq"
+
+# AWS EKS Kubernetes
 brew "aws-iam-authenticator"
 brew "awscli"
 brew "gnu-getopt"
+
+# Kubernetes Helm
 brew "helm"
 brew "helmfile"
+
+# Terraform
 brew "terraform"
 
-cask "alfred"
-cask "bartender"
-cask "chef-workstation"
-cask "dbeaver-community"
-cask "docker"
+# Ansible
+brew "ansible"
+
+#
+# Desktop Applications
+#
+
+# Browsers
 cask "firefox"
-cask "fujitsu-scansnap-home"
 cask "google-chrome"
-cask "gpg-suite"
-cask "imageoptim"
-cask "insomnia"
-cask "little-snitch"
-cask "micro-snitch"
-cask "oracle-jdk"
-cask "vimr"
+
+# Database tool
+cask "dbeaver-community"
+
+# Docker
+cask "docker"
+
+# VirtualBox
 cask "virtualbox"
 cask "virtualbox-extension-pack"
 
+# Editor
+cask "vimr"
+
+# Firewall
+cask "little-snitch"
+cask "micro-snitch"
+
+# API documentation
+cask "devdocs"
+
+# Optimize/compress images
+cask "imageoptim"
+
+# Search/application launcher
+cask "alfred"
+
+# Menu bar organizer
+cask "bartender"
+
+# REST/API client
+cask "insomnia"
+
+# GPG signing
+cask "gpg-suite"
+
+# Chef
+cask "chef-workstation"
+
+# Document scanner
+cask "fujitsu-scansnap-home"
+
+# Java
+cask "oracle-jdk"
+
+#
+# App Store Applications
+#
+
+# Password manager
 mas "1Password 7", id: 1333542190
+
+# Chat
 mas "Slack", id: 803453959
+
+# Unzip
 mas "The Unarchiver", id: 425424353
+
+# Break reminder
 mas "Time Out - Break Reminders", id: 402592703
+
+# Safari content blocker
 mas "Wipr", id: 1320666476
+
+# Development
 mas "Xcode", id: 497799835
