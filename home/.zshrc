@@ -17,19 +17,16 @@ compinit
 autoload -U bashcompinit
 bashcompinit
 
+# Use linux's `column` command to fix longer output:
+# https://github.com/larkery/zsh-histdb/pull/31
+export HISTDB_TABULATE_CMD=("$HOME/.homebrew/opt/util-linux/bin/column" -t -s $'\x1f')
+
 source "${HOME}/.zgen/zgen.zsh"
 
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
 
-#export PATH="$HOME/bin:$PATH"
-export PATH="$HOME/.local/bin:$PATH"
-export PATH="$HOME/.homebrew/sbin:$HOME/.homebrew/bin:$PATH"
-export PATH="/usr/local/go/bin:$PATH"
 export EDITOR=vim
 export VISUAL=vim
-#export LDFLAGS="-L/opt/local/lib"
-#export CFLAGS="-I/opt/local/include"
-#export CPPFLAGS="-I/opt/local/include"
 
 # Don't share history between active terminal sessions.
 unsetopt SHARE_HISTORY
@@ -53,10 +50,14 @@ HISTSIZE=5000
 
 HISTFILE="${ZDOTDIR:-$HOME}/.zhistory"
 
-# Have "history" output everything in memory (rather than just 15 lines). Also
-# add dates.
-alias history="fc -il 1"
-# alias psql="docker run --rm -it postgres:12.1-alpine psql"
+# Shortcut to lowercase uuid.
+alias uuidgenl="uuidgen | tr '[:upper:]' '[:lower:]'"
+
+# Shortcut for histdb
+alias h="histdb"
+
+# Shortcut for docker-compose
+alias dc="docker-compose"
 
 # Preventing autocomplete slowness with certain Active Directory environment
 # user lookups: http://www.zsh.org/mla/users/2006/msg00769.html
@@ -69,11 +70,14 @@ export JRUBY_OPTS="--dev"
 
 export LESS="--quit-if-one-screen --hilite-search --ignore-case --LONG-PROMPT --RAW-CONTROL-CHARS --hilite-unread --no-init --window=-4"
 
-# autoload -Uz compinit && compinit
+export PATH="$HOME/.homebrew/sbin:$HOME/.homebrew/bin:$PATH"
 source $HOME/.homebrew/opt/asdf/asdf.sh
 source $HOME/.homebrew/opt/asdf/etc/bash_completion.d/asdf.bash
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="/usr/local/go/bin:$PATH"
 
 export PATH="$HOME/.homebrew/opt/libpq/bin:$PATH"
+export PATH="$HOME/.homebrew/opt/cf-cli@7/bin:$PATH"
 export LDFLAGS="-L$HOME/.homebrew/opt/libpq/lib"
 export CPPFLAGS="-I$HOME/.homebrew/opt/libpq/include"
 export PKG_CONFIG_PATH="$HOME/.homebrew/opt/libpq/lib/pkgconfig"
@@ -85,10 +89,6 @@ export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
 
 ANDROID_HOME="~/Library/Android/sdk"
 export PATH="${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools:${PATH}"
-
-h() {
-  rg --no-filename --no-heading --no-line-number "$@" "$HISTFILE"
-}
 
 if ! zgen saved; then
   zgen prezto
@@ -107,6 +107,7 @@ if ! zgen saved; then
   zgen prezto python
 
   zgen load johanhaleby/kubetail
+  zgen load larkery/zsh-histdb
 
   zgen save
 fi

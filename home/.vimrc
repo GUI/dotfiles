@@ -22,6 +22,7 @@ Plug 'hashivim/vim-terraform'
 "Plug 'bronson/vim-trailing-whitespace'
 Plug 'bkad/CamelCaseMotion'
 Plug 'will133/vim-dirdiff'
+Plug 'ruanyl/vim-sort-imports'
 
 call plug#end()
 
@@ -89,3 +90,5 @@ let mapleader = ","
 call camelcasemotion#CreateMotionMappings('<leader>')
 
 let g:DirDiffExcludes = ".git,*.log,*.gz"
+
+set bg=light

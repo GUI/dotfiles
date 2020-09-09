@@ -13,6 +13,7 @@ brew "zsh"
 
 # Editor
 brew "neovim"
+brew "vim"
 
 # Git
 brew "git"
@@ -22,6 +23,9 @@ brew "Arkweid/lefthook/lefthook"
 
 # Encrypted git secrets
 brew "transcrypt"
+
+# Remove sensitive files from git history
+brew "bfg"
 
 # Search
 brew "ripgrep"
@@ -38,6 +42,7 @@ brew "pwgen"
 # HTTP clients
 brew "curl"
 brew "httpie"
+brew "wget"
 
 # PostgreSQL client
 brew "libpq"
@@ -60,12 +65,56 @@ brew "gnu-getopt"
 # Kubernetes Helm
 brew "helm"
 brew "helmfile"
+brew "skaffold"
 
 # Terraform
 brew "terraform"
 
 # Ansible
 brew "ansible"
+brew "esolitos/ipa/sshpass"
+
+# Cloud Foundry
+brew "cloudfoundry/tap/cf-cli"
+brew "cloudfoundry/tap/cf-cli@7"
+
+# Heroku
+brew "heroku/brew/heroku"
+
+# Rancher
+brew "rancher-cli"
+
+# Python package locking
+brew "poetry"
+
+# Inspect docker image sizes
+brew "dockviz"
+
+# Better diff for "git diff"
+brew "diff-so-fancy"
+
+# Open Build Service
+brew "osc"
+
+# Watch files for changes
+brew "watch"
+
+# Minio client (local S3-compatible API)
+brew "minio-mc"
+
+# For linux version of `column` to fix handling of longer output:
+# https://github.com/larkery/zsh-histdb/pull/31
+brew "util-linux"
+
+# JSON tools
+brew "jq"
+brew "jd"
+
+# GitHub Markdown previewing
+brew "grip"
+
+# Templating
+brew "gomplate"
 
 #
 # Desktop Applications
@@ -87,6 +136,7 @@ cask "virtualbox-extension-pack"
 
 # Editor
 cask "vimr"
+cask "macvim"
 
 # Firewall
 cask "little-snitch"
@@ -110,6 +160,8 @@ cask "insomnia"
 # GPG signing
 cask "gpg-suite"
 
+cask "visual-studio-code"
+
 # Chef
 cask "chef-workstation"
 
@@ -119,15 +171,33 @@ cask "fujitsu-scansnap-home"
 # Java
 cask "oracle-jdk"
 
+# SFTP/S3 browser
+cask "cyberduck"
+
+# Redis tool
+cask "another-redis-desktop-manager"
+
+# Identify disk usage
+cask "omnidisksweeper"
+
+# VM testing
+cask "vagrant"
+
 #
 # App Store Applications
 #
 
 # Password manager
-mas "1Password 7", id: 1333542190
+# mas "1Password 7", id: 1333542190
+
+# Prevent system sleeping
+mas "Amphetamine", id: 937984704
 
 # Chat
 mas "Slack", id: 803453959
+
+# Plain text copy/paste
+mas "Paste Plain Text", id: 803453959
 
 # Unzip
 mas "The Unarchiver", id: 425424353

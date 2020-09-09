@@ -3,7 +3,8 @@
 [core]
 	excludesfile = ~/.gitignore_global
 	attributesfile = /Users/nmuerdte/.gitattributes
-  # pager = diff-so-fancy | less --tabs=4 -RFX
+	pager = diff-so-fancy | less --tabs=4 -RFX
+	hooksPath = /Users/nmuerdte/.git-hooks-global
 [push]
 	default = simple
 #[diff]
@@ -54,3 +55,7 @@
 #[diff "rails-enc"]
 #  textconv = rails encrypted:show 2> /dev/null
 #  cachetextconv = false
+[pull]
+	ff = only
+[init]
+	defaultBranch = main
