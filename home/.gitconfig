@@ -1,17 +1,23 @@
 [include]
 	path = ~/.gitconfig.local
+#[include]
+#	path = ~/.local/share/delta-themes/themes.gitconfig
 [core]
 	excludesfile = ~/.gitignore_global
-	attributesfile = /Users/nmuerdte/.gitattributes
-	pager = diff-so-fancy | less --tabs=4 -RFX
-	hooksPath = /Users/nmuerdte/.git-hooks-global
+	attributesfile = ~/.gitattributes
+	pager = delta
+	hooksPath = ~/.git-hooks-global
+[interactive]
+	diffFilter = delta --color-only
 [push]
 	default = simple
+[diff]
+	#colorMoved = default
 #[diff]
 #	renames = true
 #	compactionHeuristic = true
 #[credential]
-#	helper = /Users/nmuerdte/bin/git-credential-osxkeychain
+#	helper = ~/bin/git-credential-osxkeychain
 [grep]
 	lineNumber = true
 	patternType = extended
@@ -47,15 +53,30 @@
 [diff "sopsdiffer"]
 	textconv = sops -d
 [diff "minjs"]
-  textconv = js-beautify
-  cachetextconv = true
+	textconv = js-beautify
+	cachetextconv = true
 [diff "mincss"]
-  textconv = js-beautify --css
-  cachetextconv = true
+	textconv = js-beautify --css
+	cachetextconv = true
 #[diff "rails-enc"]
-#  textconv = rails encrypted:show 2> /dev/null
-#  cachetextconv = false
+#	textconv = rails encrypted:show 2> /dev/null
+#	cachetextconv = false
 [pull]
 	ff = only
 [init]
 	defaultBranch = main
+[delta]
+	#plus-color = "#012800"
+	#minus-color = "#340001"
+	syntax-theme = ansi-light
+	#commit-decoration-style = bold yellow box ul
+	file-style = white magenta bold
+	file-decoration-style = blue ul ol
+	file-modified-label = "# file modified:"
+	file-removed-label = "# file removed:"
+	file-added-label = "# file added:"
+	file-renamed-label = "# file renamed:"
+	max-line-length = 2048
+	#navigate = true
+	#line-numbers = true
+	#side-by-side = true

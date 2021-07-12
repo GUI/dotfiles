@@ -15,6 +15,9 @@ brew "zsh"
 brew "neovim"
 brew "vim"
 
+brew "tmux"
+brew "reattach-to-user-namespace"
+
 # Git
 brew "git"
 
@@ -92,6 +95,7 @@ brew "dockviz"
 
 # Better diff for "git diff"
 brew "diff-so-fancy"
+brew "git-delta"
 
 # Open Build Service
 brew "osc"
@@ -110,8 +114,15 @@ brew "util-linux"
 brew "jq"
 brew "jd"
 
+# YAML tools
+brew "yj"
+brew "yq"
+
 # GitHub Markdown previewing
 brew "grip"
+
+# Markdown table of contents
+brew "github-markdown-toc"
 
 # Templating
 brew "gomplate"
@@ -182,6 +193,16 @@ cask "omnidisksweeper"
 
 # VM testing
 cask "vagrant"
+
+cask "vlc"
+
+cask "qlstephen"
+cask "qlmarkdown"
+cask "quicklook-csv"
+cask "quicklook-json"
+cask "qlimagesize"
+cask "qlcolorcode"
+cask "betterzip"
 
 #
 # App Store Applications

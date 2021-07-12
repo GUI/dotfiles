@@ -11,6 +11,10 @@ fi
 source "$REPOS/homeshick/homeshick.sh"
 homeshick link dotfiles
 
-(cd "$HOME/.homebrew" && (brew update --verbose || brew update --verbose) && brew bundle --verbose)
+case "$OSTYPE" in
+  darwin*)
+    (cd "$HOME/.homebrew" && (brew update --verbose || brew update --verbose) && brew bundle --verbose)
+    ;;
+esac
 
 vim +PlugInstall +qall

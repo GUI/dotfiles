@@ -10,6 +10,12 @@ if [[ "$SHLVL" -eq 1 && ! -o LOGIN && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
 
-export SSL_CERT_FILE="$HOME/.nrel-certs/ssl/cacert.pem"
-export SSL_CERT_DIR="$HOME/.nrel-certs/ssl/certs"
 export NODE_OPTIONS="--use-openssl-ca"
+case "$HOST" in
+  nmuerdte*)
+    export SSL_CERT_FILE="$HOME/.nrel-certs/ssl/cacert.pem"
+    export SSL_CERT_DIR="$HOME/.nrel-certs/ssl/certs"
+    export AWS_CA_BUNDLE="$HOME/.nrel-certs/ssl/cacert.pem"
+    export REQUESTS_CA_BUNDLE="$HOME/.nrel-certs/ssl/cacert.pem"
+    ;;
+esac

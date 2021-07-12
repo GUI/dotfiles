@@ -92,3 +92,5 @@ call camelcasemotion#CreateMotionMappings('<leader>')
 let g:DirDiffExcludes = ".git,*.log,*.gz"
 
 set bg=light
+
+set clipboard=unnamed,unnamedplus,autoselect

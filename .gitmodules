@@ -13,3 +13,9 @@
 [submodule "vendor/vim-plug"]
 	path = vendor/vim-plug
 	url = https://github.com/junegunn/vim-plug.git
+[submodule "shallow/.tmux/plugins/tpm"]
+	path = shallow/.tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm
+[submodule "shallow/.local/share/delta-themes"]
+	path = shallow/.local/share/delta-themes
+	url = https://github.com/dandavison/delta.git
