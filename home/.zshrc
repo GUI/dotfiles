@@ -44,8 +44,6 @@ SAVEHIST=999999999
 # Cap the amount of history read into memory.
 HISTSIZE=5000
 
-HISTFILE="${ZDOTDIR:-$HOME}/.zhistory"
-
 # Shortcut to lowercase uuid.
 alias uuidgenl="uuidgen | tr '[:upper:]' '[:lower:]'"
 
